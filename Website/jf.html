@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Example</title>
+    <style>
+      /* Set the height of the map container */
+      #map-container {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-container"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpZQN9l4VOvQ-NRXvLv8vnILRsGB_X30Q"></script>
+    <script>
+      // Initialize the map
+      function initMap() {
+        // Set the initial center and zoom level of the map
+        var center = {lat: 19.38, lng: 85.075};
+        var zoom = 13;
+
+        // Create a new map object
+        var map = new google.maps.Map(document.getElementById('map-container'), {
+          center: center,
+          zoom: zoom
+        });
+      }
+
+      // Call the initMap function when the page has finished loading
+      google.maps.event.addDomListener(window, 'load', initMap);
+    </script>
+  </body>
+</html>

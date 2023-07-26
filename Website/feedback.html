@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack Form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+
+<body>
+    <!-- <aside class="feedback-sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="logo.png">
+                <h2>LULC <span class="danger">NAVIGATOR</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </div>
+        </div>
+        <div class="sidebar">
+            <a href="#">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="index.html" class="">
+                <span class="material-icons-sharp">home</span>
+                <h3>HOME</h3>
+            </a>
+            <a href="#" class="">
+                <span class="material-icons-sharp">bar_chart</span>
+                <h3>Analytics</h3>
+            </a>
+            <a href="" class="active">
+                <span class="material-icons-sharp">comment</span>
+                <h3>FEEDBACK</h3>
+            </a>
+        </div>
+    </aside> -->
+    <div class="container">
+        <!-- =====================  FEEDBACK  =============================== -->
+        <form action="database.php" method="post">
+            <h1 class="form-title">FeedBack Form</h1>
+            <div class="user-info">
+                <div>
+                    <span class="experience">How was your overall experience</span>
+                    <div class="category">
+                        <label class="radio"><input type="radio" name="rate" value="Bad"><span>Bad</span></label>
+                        <label class="radio"><input type="radio" name="rate" value="Average"><span>Average</span></label>
+                        <label class="radio"></label><input type="radio" name="rate" value="Good"><span>Good</span></label>
+                    </div>
+                </div>
+                <div class="gender-info">
+                    <span class="experience">Gender</span>
+                    <div class="category">
+                        <label class="radio"><input type="radio" name="gender" value="M"><span>Male</span></label>
+                        <label class="radio"><input type="radio" name="gender" value="F"><span>Female</span></label>
+                        <label class="radio"><input type="radio" name="gender" value="O"><span>Others</span></label>
+                    </div>
+                </div>
+                <div class="user-input-box">
+                    <label>First Name</label>
+                    <input type="text" name="firstname" placeholder="First Name">
+                </div>
+                <div class="user-input-box">
+                    <label>Last Name</label>
+                    <input type="text" name="lastname" placeholder="Last Name">
+                </div>                
+                <div class="user-input-box">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="example@gmail.com">
+                </div>
+                <div class="user-input-box">
+                    <label>Phone Number</label>
+                    <input type="text" name="phone" placeholder="+91 0000000000">
+                </div>
+                <div class="user-feedback">
+                    <label>FeedBack</label><br>
+                    <textarea class="textarea" name="FeedBack"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="submit-btn" name="sb">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

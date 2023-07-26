@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps India</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Set the size of the map container */
+      #map {
+        height: 100%;
+      }
+      /* Set the size of the HTML element that contains the map */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add a div element to contain the map -->
+    <div id="map"></div>
+    <!-- Include the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpZQN9l4VOvQ-NRXvLv8vnILRsGB_X30Q"></script>
+    <script>
+      // Initialize the map
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 20.5937, lng: 78.9629}, // Set the center of the map to India
+          zoom: 5 // Set the zoom level
+        });
+      }
+    </script>
+    <!-- Call the initMap function after the Google Maps JavaScript API has loaded -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpZQN9l4VOvQ-NRXvLv8vnILRsGB_X30Q&callback=initMap">
+    </script>
+  </body>
+</html>

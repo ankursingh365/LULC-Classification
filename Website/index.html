@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Project</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #map{
+            margin-top: -150px;
+            margin-left: 280px;
+            height: 450px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- SIDE BAR -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png">
+                    <h2>LULC <span class="danger">NAVIGATOR</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>HOME</h3>
+                </a>
+                <!-- <a href="stats.html">
+                    <span class="material-icons-sharp">table_chart</span>
+                    <h3>STATISTICS</h3>
+                </a> -->
+                <a href="analysis.html">
+                    <span class="material-icons-sharp">query_stats</span>
+                    <h3>ANALYSIS</h3>
+                </a>
+                <!-- <a href="accuracy.html">
+                    <span class="material-icons-sharp">assessment</span>
+                    <h3>ACCURACY ASSESSMENT</h3>
+                </a> -->
+                <a href="feedback.html">
+                    <span class="material-icons-sharp">comment</span>
+                    <h3>FEEDBACK</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- SIDE BAR END -->
+        <!-- ======================================== -->
+        <!-------- MAIN -------->
+        <main>
+            <div class="drop-down">
+                <label>Enter The Location:</label>
+                <br>
+                <select name="loc-dropdown" id="map-dropdown">
+                    <option value="base-map">Normal Map</option>
+                    <option value="ganjam">Ganjam District,Odisha</option>
+                </select>
+                <br><br>
+                <label>Enter Time Period:</label>
+                <br>
+                <select name="loc-dropdown" id="map-dropdown1">
+                    <option value="2010">2010</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div class="legend">
+                <h3>INDEX</h3>
+                <img src="legend.png">
+            </div>
+            <div id="map"></div>
+            <script>
+                function initMap(){
+                    var location = {lat: 20.5937, lng: 78.9629};
+                    var map = new google.maps.Map(document.getElementById("map"),{
+                        zoom:7,
+                        center: location
+                    });
+                }
+            </script>
+            <style>
+                iframe {
+                    z-index: 4;
+                    position: absolute;
+                    left: 44%;
+                    top: 0%;
+                    right : 6%;
+                    width: 55%;
+                    height: 100%;
+                    will-change: transform;
+                    transform: translate(0px, 0px);
+                }
+              </style>          
+            <iframe id="map-frame" src="hk.html"></iframe>
+            <script>
+                // get the necessary elements
+                const dropdown = document.getElementById('map-dropdown');
+                const dropdown1 = document.getElementById('map-dropdown1');
+                const mapFrame = document.getElementById('map-frame');
+                
+                // define the event handler for when the dropdown changes
+                function handleDropdownChange() {
+                  // get the value of the selected option
+                  const selectedOption = dropdown.value;
+                  let newSrc;
+
+                  const selectedOption1 = dropdown1.value;
+                  let newSrc1;
+                  
+                  // determine which map to display based on the selected option
+                  switch (selectedOption) {
+                    case 'base-map':
+                      newSrc = 'hk.html';
+                      break;
+                    case 'ganjam':
+                      newSrc = 'jf.html';
+                      break;
+                  }
+                  switch (selectedOption1) {
+                    case '2010':
+                      newSrc1 = 'https://storage.googleapis.com/lulcbucket/classification_2010_/index.html';
+                      break;
+                    case '2020':
+                      newSrc1 = 'https://storage.googleapis.com/lulcbucket/Map_Visualizetion_SVM_2020/index.html';
+                      break;
+                    default:
+                      newSrc1 = 'hk.html';
+                      break;
+                  }
+                  
+                  // set the new source
+                  mapFrame.setAttribute('src', newSrc);
+                  mapFrame.setAttribute('src', newSrc1);
+                }
+                
+                // attach the event listener to the dropdown
+                dropdown.addEventListener('change', handleDropdownChange);
+                dropdown1.addEventListener('change', handleDropdownChange);
+              </script>
+        </main>
+        <!-------- MAIN END ------->
+        <!-- ======================================== -->
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

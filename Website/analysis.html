@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="analysis.css">
+
+
+
+    <style>
+        /* center the image */
+        /* .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }*/
+
+        /* set a max width for the image */
+        /* .image-container img {
+            max-width: 50%;
+            max-height: 100%;
+        }  */
+        
+        .col{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .image-grid {
+            /* margin-top: 20px; */
+            margin-left: 50px;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-gap: 20px;
+        }
+
+        .c2010{
+            margin-top: -1850px;
+            margin-left: -90px;
+            /* margin-right: -200px; */
+            padding: 100%;
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-gap: 20px;
+        }
+
+        .grid-item {
+            /* margin-top: 100px; */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin-left: -50%;
+            padding: 20px;
+        }
+
+        .grid-item img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .grid{
+            /* margin-top: -10px; */
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin-right: -100%;
+            margin-bottom: -20px;
+            padding: 20px;
+        }
+
+        .grid img {
+            margin-left: -60%;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- SIDE BAR -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.png">
+                    <h2>LULC <span class="danger">NAVIGATOR</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>HOME</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">query_stats</span>
+                    <h3>ANALYSIS</h3>
+                </a>
+                <!-- <a href="accuracy.html">
+                    <span class="material-icons-sharp">assessment</span>
+                    <h3>ACCURACY ASSESSMENT</h3>
+                </a> -->
+                <a href="feedback.html">
+                    <span class="material-icons-sharp">comment</span>
+                    <h3>FEEDBACK</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- IMAGE CONTAINER -->
+        <div class="col">
+            <div class="image-grid">
+                <h3 class="heading">Change Analysis for 2020</h3>
+                <div class="grid-item"><img src="a.png"></div>
+                <p class="para">Bar Plot of Land cover class w.r.t area</p>
+                <div class="grid-item"><img src="b.png"></div>
+                <p class="para" style="margin-left: -10px;">Pie Chart showing the coverage area of LULC classes</p>
+                <div class="grid-item"><img src="c.png"></div>
+                <p class="para">Area distribution table for 2020</p>
+                <br>
+            </div>
+            <div class="c2010">
+                <h3 class="heading">Change Analysis for 2010</h3>
+                <div class="grid"><img src="f.png"></div>
+                <p class="para">Bar Plot of Land cover class w.r.t area</p>
+                <br>
+                <div class="grid"><img src="e.png"></div>
+                <p class="para">Pie Chart showing the coverage area of LULC classes</p>
+                <!-- <br> -->
+                <div class="grid"><img src="d.png"></div>
+                <p class="para">Area distribution table for 2010</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
